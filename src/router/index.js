@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import Live2d from "@/views/Live2dView.vue";
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: HomeView,
+    name: "live2d",
+    component: Live2d,
   },
   {
     path: "/about",
@@ -15,6 +15,16 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: function () {
       return import(/* webpackChunkName: "about" */ "../views/AboutView.vue");
+    },
+  },
+  // 默认的404路由
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: function () {
+      return import(
+        /* webpackChunkName: "notfound" */ "../components/NotFound.vue"
+      );
     },
   },
 ];

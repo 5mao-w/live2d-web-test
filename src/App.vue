@@ -1,6 +1,7 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
+    <router-link to="/">Live2D</router-link>
+    |
     <router-link to="/about">About</router-link>
   </nav>
   <router-view />
@@ -28,3 +29,7 @@ nav {
   }
 }
 </style>
+<script setup>
+// eslint-disable-next-line no-unused-vars
+//import Live2d from "@/views/Live2dView.vue";
+</script>
